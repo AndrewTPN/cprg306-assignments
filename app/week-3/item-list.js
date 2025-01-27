@@ -15,13 +15,14 @@ const item11 = { name: "dish soap 🍽️", quantity: 1, category: "household" }
 const item12 = { name: "hand soap 🧼", quantity: 4, category: "household" };
 
 const ItemList = () => {
-// Render each item
+
+    // Render each item
     const renderItem = (item) => (
     <Item name={item.name} quantity={item.quantity} category={item.category} />
     );
 
 return (
-<div className="grid grid-cols-1 gap-4">
+<div className="grid grid-cols-1 gap-4 width-full md:grid-cols-2 lg:grid-cols-3">
     {renderItem(item1)}
     {renderItem(item2)}
     {renderItem(item3)}
