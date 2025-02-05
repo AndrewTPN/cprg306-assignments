@@ -1,4 +1,6 @@
 import StudentInfo from "./student-info";
+import '../global.css'
+
 export default function Page() {
 return (
     <main>

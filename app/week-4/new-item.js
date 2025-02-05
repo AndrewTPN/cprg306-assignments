@@ -4,8 +4,18 @@ import { useState } from "react";
 
 export default function NewItem() {
     const [count, setCount] = useState(0);
-    const Increment = () => setCount(count + 1);
-    const Decrement = () => setCount(count - 1);
+
+    const Increment = () => {
+        if (count < 20) {
+            setCount(count + 1);
+        }
+    };
+
+    const Decrement = () => {
+        if (count > 0) {
+            setCount(count - 1);
+        }
+    };
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -16,7 +26,8 @@ export default function NewItem() {
                 <div className="flex items-center justify-between">
                     <button 
                         onClick={Decrement} 
-                        className="w-12 h-12 bg-red-500 text-white text-xl font-bold rounded-lg hover:bg-red-600"
+                        className="w-12 h-12 bg-red-500 text-white text-xl font-bold rounded-lg hover:bg-red-600 disabled:bg-gray-300"
+                        disabled={count === 0}
                     >
                         -
                     </button>
@@ -25,7 +36,8 @@ export default function NewItem() {
 
                     <button 
                         onClick={Increment} 
-                        className="w-12 h-12 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-600"
+                        className="w-12 h-12 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-600 disabled:bg-gray-300"
+                        disabled={count === 20}
                     >
                         +
                     </button>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from 'react';
 import Link from 'next/link';
-
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
