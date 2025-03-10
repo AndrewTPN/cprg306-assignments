@@ -49,6 +49,14 @@ const HomePage = () => {
               Week 6 Assignment
             </Link>
           </li>
+          <li>
+            <Link
+              href="/week-7"
+              className="block w-full text-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-green-300 hover:shadow transition"
+            >
+              Week 7 Assignment
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
